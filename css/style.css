@@ -53,6 +53,7 @@ nav li{
     height:40px;
     width:100px;
     transition:0.5s;
+    cursor: pointer;
 }
 
 .btnc{
@@ -64,6 +65,7 @@ nav li{
     border:none;
     height:40px;
     width:100px;
+    cursor: pointer;
 }
 
 .btnt{
@@ -79,6 +81,7 @@ nav li{
     -webkit-transform: rotateZ(-180deg);
     -ms-transform: rotateZ(-180deg);
     transform: rotateZ(-180deg);
+    cursor: pointer;
 }
 
 @keyframes changeShift{
