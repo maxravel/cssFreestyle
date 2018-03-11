@@ -31,11 +31,27 @@ $(document).ready(function(){
      
     });
     
+    // $("#tran").click(function(){
+    //     $("#test1").toggleClass("transit");
+    //     $("#tran").toggleClass("btnt");
+    //     $('#test1').toggleClass('test1l');
+    // });
 
-    $("#tran").click(function(){
-        $("#test1").toggleClass("transit");
-        $("#tran").toggleClass("btnt");
+    const tran = document.querySelector('#tran');
+
+    tran.addEventListener('click', function(){
+        if(tran.classList.contains('btnt')){
+            test1.classList.remove('test1l');
+            test1.classList.add('test1r');
+            tran.classList.remove('btnt');
+        }
+        else{
+            test1.classList.add('test1l');
+            tran.classList.add('btnt');
+            test1.classList.remove('test1r');
+        }
     });
+
 
     $("#grad").click(function(){
         $(".mainSection").toggleClass("mainSectionG");

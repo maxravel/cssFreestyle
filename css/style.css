@@ -17,7 +17,7 @@
         linear-gradient(
             #ffffff, #e24040
         );
-    height:800px;
+    height:100vh;
     background-size: 100% 100%;
     transition:0.5s;
 }
@@ -54,6 +54,7 @@ nav li{
     width:100px;
     transition:0.5s;
     cursor: pointer;
+    position:relative;
 }
 
 .btnc{
@@ -84,18 +85,46 @@ nav li{
     cursor: pointer;
 }
 
-@keyframes changeShift{
-    /*0%, 100%{
+.test1r{
+    animation-name: driverk;
+    animation-duration: 1s;
+}
+
+@keyframes driverk{
+    0%{transform: translateY(0);}
+    50%{transform:translateY(-150px);}
+    100%{transform:translateY(0);}
+}
+
+.test1l{
+    /* animation-name: changeShift 5s */
+    animation-name: drivel;
+    animation-duration: 1s;
+
+    /* -webkit-transform: rotateZ(-180deg);
+    -ms-transform: rotateZ(-180deg);
+    transform: rotateZ(-180deg); */
+}
+
+/* @keyframes changeShift{
+    0%, 100%{
         transform: translate(0,0);
         border-radius:20px;
-        background-color: green
-
+        background-color: green;
     }
     30%{
         transform: translate(-300px,-300px) scale (2,2)
-    }*/
+    }
     -webkit-transform: rotateZ(-130deg);
     -ms-transform: rotateZ(-130deg);
     transform: rotateZ(-130deg);
-}
+} */
 
+@keyframes drivel{
+    0%{transform: translateX(0);}
+    50%{transform:translateX(-300px);}
+    100%{transform:translateX(0);}
+    /* 0% { font-size:100px; }
+    50% {font-size:20px;}
+    100% { font-size:100px; } */
+}
