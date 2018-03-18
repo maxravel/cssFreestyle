@@ -7,19 +7,25 @@
 
 .mainSection{
     background-color: #e24040;
+    /* background:
+    linear-gradient(
+        #e24040, #e24040
+    ); */
     height:100vh;
     background-size: 100% 100%;
-    transition:0.5s;
+    transition:1.5s all;
 }
 
 .mainSectionG{
+    background-color:#530853;
     background:
         linear-gradient(
-            #ffffff, #e24040
-        );
+            #530853, #e24040
+    );
+    background: radial-gradient(#e24040, white, #530853);
     height:100vh;
     background-size: 100% 100%;
-    transition:0.5s;
+    transition:1.5s all;
 }
 
 .first{

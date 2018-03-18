@@ -53,10 +53,27 @@ $(document).ready(function(){
     });
 
 
-    $("#grad").click(function(){
-        $(".mainSection").toggleClass("mainSectionG");
-        $("#grad").toggleClass("btnc");
-    });
+    const grad = document.querySelector('#grad');
+    const main = document.querySelector('#main');
+
+    grad.addEventListener('click', function(){
+        if(grad.classList.contains('btnc')){
+            main.classList.remove('mainSectionG');
+            main.classList.add('mainSection');
+            grad.classList.remove('btnc');
+        }
+        else{
+            grad.classList.add('btnc');
+            main.classList.remove('mainSection');
+            main.classList.add('mainSectionG');
+        }
+    })
+
+    // $("#grad").click(function(){
+    //     $(".mainSection").toggleClass("mainSectionG");
+    //     $("#grad").toggleClass("btnc");
+    //     //setTimeout(() => current.classList.remove('fade-in'), 500);
+    // });
 
 });
 
