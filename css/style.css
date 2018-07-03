@@ -6,26 +6,31 @@
 }
 
 .mainSection{
-    background-color: #e24040;
-    /* background:
-    linear-gradient(
-        #e24040, #e24040
-    ); */
+    background:#e24040 ;
+    /* background-color: #e24040; */
     height:100vh;
     background-size: 100% 100%;
     transition:1.5s all;
 }
 
 .mainSectionG{
-    background-color:#530853;
-    background:
+    /* background-color:#530853; */
+    /* background:
         linear-gradient(
             #530853, #e24040
-    );
+    );  */
+    /* background-color:yellow; */
     background: radial-gradient(#e24040, white, #530853);
     height:100vh;
     background-size: 100% 100%;
-    transition:1.5s all;
+    transition: all 2s;
+}
+
+
+
+nav li{
+    display:inline;
+    padding:20px;
 }
 
 .first{
@@ -44,10 +49,7 @@
     font-family: 'Spectral SC', serif;
 }
 
-nav li{
-    display:inline;
-    padding:20px;
-}
+
 
 .btn{
     font-size: 18px;
@@ -91,21 +93,25 @@ nav li{
     cursor: pointer;
 }
 
+
+
 .test1r{
     animation-name: driverk;
     animation-duration: 1s;
+    animation-iteration-count: 1;
 }
 
 @keyframes driverk{
     0%{transform: translateY(0);}
-    50%{transform:translateY(-150px);}
-    100%{transform:translateY(0);}
+    50%{transform: translateY(-150px);}
+    100%{transform: translateY(0);}
 }
 
 .test1l{
     /* animation-name: changeShift 5s */
     animation-name: drivel;
     animation-duration: 1s;
+    animation-iteration-count: 1;
 
     /* -webkit-transform: rotateZ(-180deg);
     -ms-transform: rotateZ(-180deg);
@@ -128,9 +134,24 @@ nav li{
 
 @keyframes drivel{
     0%{transform: translateX(0);}
-    50%{transform:translateX(-300px);}
-    100%{transform:translateX(0);}
+    50%{transform: translateX(-300px);}
+    100%{transform: translateX(0);}
     /* 0% { font-size:100px; }
     50% {font-size:20px;}
     100% { font-size:100px; } */
+}
+
+
+
+.test1infinite{
+    animation-name: infiniteAnimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes infiniteAnimation{
+    0%{color:#530853;}
+    25%{color:blue;}
+    50%{color:yellow;}
+    75%{color:green;}
 }

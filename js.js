@@ -8,8 +8,8 @@ $(document).ready(function(){
 
     // PURE JS CODE
 
-    const shd = document.querySelector('#shd');
-    const test1 = document.querySelector('#test1');
+    const shadowB = document.querySelector('#shadowButton');
+    const testT = document.querySelector('#testT');
 
     // VERSION 1 - LONG ONE
     // shd.addEventListener('click', function(){
@@ -24,10 +24,10 @@ $(document).ready(function(){
     // });
 
     // VERSION 2 - SHORT ONE
-    shd.addEventListener('click', function(){
+    shadowB.addEventListener('click', function(){
         
-           shd.classList.toggle('btnc');
-           test1.classList.toggle('shadow');
+           shadowB.classList.toggle('btnc');
+           testT.classList.toggle('shadow');
      
     });
     
@@ -37,43 +37,59 @@ $(document).ready(function(){
     //     $('#test1').toggleClass('test1l');
     // });
 
-    const tran = document.querySelector('#tran');
+    const transformB = document.querySelector('#transformButton');
 
-    tran.addEventListener('click', function(){
-        if(tran.classList.contains('btnt')){
-            test1.classList.remove('test1l');
-            test1.classList.add('test1r');
-            tran.classList.remove('btnt');
+    transformB.addEventListener('click', function(){
+
+        if(transformB.classList.contains('btnt')){
+            testT.classList.remove('test1l');
+            testT.classList.add('test1r');
+            transformB.classList.remove('btnt');
         }
         else{
-            test1.classList.add('test1l');
-            tran.classList.add('btnt');
-            test1.classList.remove('test1r');
+            testT.classList.add('test1l');
+            transformB.classList.add('btnt');
+            testT.classList.remove('test1r');
         }
+
     });
 
 
-    const grad = document.querySelector('#grad');
+    const gradientB = document.querySelector('#gradientButton');
     const main = document.querySelector('#main');
 
-    grad.addEventListener('click', function(){
-        if(grad.classList.contains('btnc')){
-            main.classList.remove('mainSectionG');
-            main.classList.add('mainSection');
-            grad.classList.remove('btnc');
-        }
-        else{
-            grad.classList.add('btnc');
-            main.classList.remove('mainSection');
-            main.classList.add('mainSectionG');
-        }
+    gradientB.addEventListener('click', function(){
+
+        gradientB.classList.toggle('btnc');
+        main.classList.toggle('mainSectionG');
+
     })
 
-    // $("#grad").click(function(){
+    // $("#gradientB").click(function(){
     //     $(".mainSection").toggleClass("mainSectionG");
-    //     $("#grad").toggleClass("btnc");
+    //     $("#gradientB").toggleClass("btnc");
     //     //setTimeout(() => current.classList.remove('fade-in'), 500);
     // });
+
+
+    //after clicking infinite and transform, when removing infinite testText is going up and down
+    const infiniteB = document.querySelector("#infiniteButton");
+
+    infiniteB.addEventListener("click", function(){
+
+        if(infiniteB.classList.contains('btnc')){
+            testT.classList.remove('test1infinite');
+            infiniteB.classList.remove('btnc');
+        }
+        else{
+            testT.classList.add('test1infinite');
+            infiniteB.classList.add('btnc');
+        }
+
+        // infiniteB.classList.toggle('btnc');
+        // testT.classList.toggle('test1infinite');
+
+    })
 
 });
 
