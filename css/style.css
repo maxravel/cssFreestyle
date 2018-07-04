@@ -142,8 +142,8 @@ nav li{
 }
 
 
-
-.test1infinite{
+/* XXXXXXXXXXXXXXXXXXXX color changer, CSS version, don't work well */
+/* .test1infinite{
     animation-name: infiniteAnimation;
     animation-duration: 4s;
     animation-iteration-count: infinite;
@@ -154,4 +154,4 @@ nav li{
     25%{color:blue;}
     50%{color:yellow;}
     75%{color:green;}
-}
+} */
